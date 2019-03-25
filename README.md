@@ -19,4 +19,5 @@ export TWILIO_TEL_FROM=${ YOUR_TWILIO_TELNO_HERE }
 ```
 npm run make
 aws s3 cp ./build/twilioCaller.zip s3://{ YOUR_S3_BUCKET_HERE }/
+aws lambda update-function-code --function-name {YOUR_LAMBDA_FUNCTION_NAME} --s3-bucket {YOUR_S3_BUCKET_HERE} --s3-key twilioCaller.zip --publish
 ```
