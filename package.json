@@ -1,19 +1,7 @@
 {
   "name": "twilio-caller",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "build": "babel src -d build",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "make": "npm i && gulp clean && babel src -d build && gulp install-dependancies && gulp build-zip"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:ryoichi-obara/twilio-caller.git"
-  },
   "author": "Ryoichi Obara <npmjs0102@gmail.com> (http://ryoichi0102.hatenablog.com/)",
-  "license": "MIT",
   "dependencies": {
     "twilio": "^3.11.3"
   },
@@ -26,5 +14,16 @@
     "gulp-clean": "^0.3.2",
     "gulp-install": "^1.1.0",
     "gulp-zip": "^4.0.0"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ryoichi-obara/twilio-caller.git"
+  },
+  "scripts": {
+    "build": "babel src -d build",
+    "make": "npm i && gulp clean && babel src -d build && gulp install-dependancies && gulp build-zip",
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
