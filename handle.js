@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 // Parmeters for lambda function. (This is default values of lambda function test.)
 const event = {
   callTo: '+818012345678',
