@@ -8,16 +8,13 @@ exports.handler = async (event) => {
   // https://jp.twilio.com/docs/api/twiml/twilio_request
 
   console.log(`Callig to ${event.callTo}...`);
-  client.calls.create(
-    {
-      url: 'http://demo.twilio.com/docs/voice.xml',
-      to: event.callTo,
-      from: telFrom,
-    },
-    (err, call) => {
-      console.log(call.sid);
-    },
-  );
+  const call = await client.calls.create({
+    url: 'http://demo.twilio.com/docs/voice.xml',
+    to: event.callTo,
+    from: telFrom,
+  });
+
+  console.log(call.sid);
 
   return {
     statusCode: 200,
